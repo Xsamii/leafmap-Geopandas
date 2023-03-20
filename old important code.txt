@@ -1,0 +1,4 @@
+gfile = gpd.read_file(heatFile).set_crs(3857,allow_override=True)
+        gdf = gpd.GeoDataFrame(geometry=gfile['geometry']).set_crs(3875,allow_override=True)
+        m.add_gdf(gfile)
+        st.write("done")
